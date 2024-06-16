@@ -1,0 +1,11 @@
+java 
+import java.util.Random; 
+public static int productOfRandomNumbers() {
+Random random = new Random(); 
+int num1 = random.nextInt(51); // Генерация случайного числа от 0 до 50 
+int num2 = random.nextInt(51); // Генерация случайного числа от 0 до 50 
+return num1 * num2; 
+} 
+public static void main(String[] args) { 
+System.out.println("Произведение двух рандомных чисел : " + productOfRandomNumbers()); 
+}

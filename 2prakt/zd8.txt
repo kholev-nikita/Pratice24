@@ -1,0 +1,3 @@
+int[] newCombinedArray = new int[newArray.length + 1]; 
+newCombinedArray[0] = -1; 
+System.arraycopy(newArray, 0, newCombinedArray, 1, newArray.length);

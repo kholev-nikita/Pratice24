@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Создаем переменную
+        int number = 10;
+
+        // Узнаем тип переменной
+        String type = getType(number);
+
+        // Выводим текст в зависимости от значения переменной
+        if (number > 0) {
+            System.out.println("Переменная положительная");
+        } else if (number < 0) {
+            System.out.println("Переменная отрицательная");
+        } else {
+            System.out.println("Переменная равна нулю");
+        }
+
+        // Выводим тип переменной
+        System.out.println("Тип переменной: " + type);
+    }
+
+    // Метод для определения типа переменной
+    public static String getType(Object obj) {
+        return obj.getClass().getSimpleName();
+    }
+}

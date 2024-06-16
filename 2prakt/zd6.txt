@@ -1,0 +1,4 @@
+int lastElement = combinedArray[combinedArray.length - 1]; 
+int[] newArray = new int[combinedArray.length - 1]; 
+System.arraycopy(combinedArray, 0, newArray, 0, newArray.length); 
+System.out.println("Последний удаленный элемент: " + lastElement);

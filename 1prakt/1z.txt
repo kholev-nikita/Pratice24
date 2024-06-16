@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+
+public class Main {
+    public static void main(String[] args) {
+        // Спрашиваем у пользователя его знак зодиака
+        String zodiacSign = JOptionPane.showInputDialog("Введите знак зодиака:");
+
+        // Всплывающее окно приветствия в зависимости от знака зодиака
+        switch (zodiacSign.toLowerCase()) {
+            case "овен":
+                JOptionPane.showMessageDialog(null, "Привет, Овен!");
+                break;
+            case "телец":
+                JOptionPane.showMessageDialog(null, "Привет, Телец!");
+                break;
+            case "близнецы":
+                JOptionPane.showMessageDialog(null, "Привет, Близнецы!");
+                break;
+            case "рак":
+                JOptionPane.showMessageDialog(null, "Привет, Рак!");
+                break;
+            case "лев":
+                JOptionPane.showMessageDialog(null, "Привет, Лев!");
+                break;
+            case "дева":
+                JOptionPane.showMessageDialog(null, "Привет, Дева!");
+                break;
+            case "весы":
+                JOptionPane.showMessageDialog(null, "Привет, Весы!");
+                break;
+            case "скорпион":
+                JOptionPane.showMessageDialog(null, "Привет, Скорпион!");
+                break;
+            case "стрелец":
+                JOptionPane.showMessageDialog(null, "Привет, Стрелец!");
+                break;
+            case "козерог":
+                JOptionPane.showMessageDialog(null, "Привет, Козерог!");
+                break;
+            case "водолей":
+                JOptionPane.showMessageDialog(null, "Привет, Водолей!");
+                break;
+            case "рыбы":
+                JOptionPane.showMessageDialog(null, "Привет, Рыбы!");
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Неизвестный знак зодиака!");
+                break;
+        }
+    }
+}

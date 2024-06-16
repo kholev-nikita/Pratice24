@@ -1,0 +1,1 @@
+java System.out.println("Длина массива array2: " + array2.length);

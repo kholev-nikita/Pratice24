@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+
+public class Main {
+    public static void main(String[] args) {
+        boolean validInput = false;
+        int number = 0;
+
+        // Цикл, работает пока не будет введено корректное число
+        while (!validInput) {
+            try {
+                // Запашиваем число у пользователя
+                String input = JOptionPane.showInputDialog("Введите число больше 5:");
+
+                // Проверяем на отмену или ввод не валидного значения
+                if (input == null) {
+                    // Пользователь отменил ввод
+                    JOptionPane.showMessageDialog(null, "Отменена пользователем.");
+                    return;
+                }
+
+                // Парсим введенные строки в число
+                number = Integer.parseInt(input);
+
+                // Проверяем условия (число больше 5)
+                if (number > 5) {
+                    validInput = true;
+                } else {
+                    // Вывод сообщения об ошибке
+                    JOptionPane.showMessageDialog(null, "Число должно быть больше 5. Введите повторно.");
+                }
+            } catch (NumberFormatException e) {
+                // Вывод сообщения об ошибке при вводе не числа
+                JOptionPane.showMessageDialog(null, "Ошибка! Введите целое число.");
+            }
+        }
+
+        // Вывод сообщения с поздравлением
+        JOptionPane.showMessageDialog(null, "Поздравляем! Вы ввели число больше 5: " + number);
+    }
+}
